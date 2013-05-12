@@ -1,7 +1,9 @@
 Juancar::Application.routes.draw do
-  get "static_pages/home"
+  root to: 'static_pages#home'
+  
+  match '/data', to: 'static_pages#data'
 
-  get "static_pages/data"
+  mathjax 'mathjax'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
